@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../public/image/tcgames-inicial.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo padrão para telas maiores */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+        /* Adicione estilos adicionais para telas maiores conforme necessário */
+    }
+}
+
+/* Estilo para telas menores, como smartphones */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+        /* Adicione estilos adicionais para telas menores conforme necessário */
+    }
+}

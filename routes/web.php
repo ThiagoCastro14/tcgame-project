@@ -4,17 +4,20 @@ use App\Http\Controllers\Admin\RespostaSuporteController;
 use App\Http\Controllers\Admin\SuporteController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Site\ContatoController;
+use App\Http\Controllers\DownloadController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/contato', [ContatoController::class, 'contact']);
+Route::get('/contato', [ContatoController::class, 'showForm'])->name('contato.form');
+Route::post('/contato/enviar', [ContatoController::class, 'sendForm'])->name('contato.send');
+
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/home', function () {
+    return view('home');
+})->middleware(['auth', 'verified'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -32,6 +35,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/suporte/create', [SuporteController::class, 'create'])->name('suporte.create');
     Route::post('/suporte', [SuporteController::class, 'store'])->name('suporte.store');
     Route::get('/suporte', [SuporteController::class, 'index'])->name('suporte.index');
+
+    Route::get('/download', [DownloadController::class, 'index'])->name('download.index');
+    Route::get('/download/windows/{teste}', [DownloadController::class, 'windowsDownload'])->name('windows');
+   /*  Route::get('/download/linux', [DownloadController::class, 'download'])->name('download.linux'); */
 
     
 });
