@@ -18,13 +18,14 @@ return new class extends Migration
             $table->text('descricao');
             $table->timestamps();
 
+            $table->foreign('suporte_id')
+                ->references('id')
+                ->on('suportes')
+                ->onDelete('cascade'); // Adiciona a ação de cascata
+
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
-
-            $table->foreign('suporte_id')
-                ->references('id')
-                ->on('suportes');
         });
     }
 
