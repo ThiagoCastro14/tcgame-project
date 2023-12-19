@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Downloads</title>
 
     <x-app-layout>
         <x-slot name="header">
@@ -16,7 +17,7 @@
                 font-family: 'Arial', sans-serif;
                 background-color: #f3f3f3;
                 color: #333;
-                padding: 20px;
+                padding: 5px;
                 line-height: 1.6;
                 text-align: center;
             }
@@ -41,7 +42,7 @@
         margin-right: 5px; /* Adicione espaçamento entre os ícones */
     }
     footer {
-                margin-top: 565px;
+                margin-top: 33%;
                 padding: 10px;
                 background-color: #333;
                 color: #fff;

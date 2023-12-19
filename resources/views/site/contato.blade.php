@@ -16,7 +16,7 @@
                 font-family: 'Arial', sans-serif;
                 background-color: #f3f3f3;
                 color: #333;
-                padding: 20px;
+                padding: 5px;
                 line-height: 1.6;
                 text-align: center;
             }        
@@ -44,7 +44,7 @@ textarea {
     padding: 8px; 
 }
       footer {
-                margin-top: 250px;
+                margin-top:15%;
                 padding: 10px;
                 background-color: #333;
                 color: #fff;
