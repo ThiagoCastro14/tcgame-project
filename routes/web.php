@@ -37,7 +37,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/suporte', [SuporteController::class, 'index'])->name('suporte.index');
 
     Route::get('/download', [DownloadController::class, 'index'])->name('download.index');
-    Route::get('/download/windows/{teste}', [DownloadController::class, 'windowsDownload'])->name('windows');
+    Route::get('/download/windows/{windows}', [DownloadController::class, 'windowsDownload'])->name('windows');
+    Route::get('/download/linux/{linux}', [DownloadController::class, 'linuxDownload'])->name('linux'); 
+    Route::get('/download/ios/{ios}', [DownloadController::class, 'iosDownload'])->name('ios'); 
+
+    
    /*  Route::get('/download/linux', [DownloadController::class, 'download'])->name('download.linux'); */
 
     

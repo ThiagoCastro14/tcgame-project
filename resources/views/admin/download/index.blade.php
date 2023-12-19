@@ -54,15 +54,15 @@
     <section class="container px-4 mx-auto py-4">        
 
         <div>
-            <a href="{{ asset('storage/arquivos/teste.rar') }}">
+            <a href="{{ asset('storage/arquivos/windows.rar') }}">
                 <img src="{{ asset('image/icons/windows.png') }}" alt="Linux Icon" class="icon">
                 TC Games
                 </a>     
-           <a href="{{ asset('storage/arquivos/teste.rar') }}" class="link">
+           <a href="{{ asset('storage/arquivos/linux.rar') }}" class="link">
                 <img src="{{ asset('image/icons/linux.png') }}" alt="Linux Icon" class="icon">
                 TC Games
                 </a>     
-            <a href="{{ asset('storage/arquivos/teste.rar') }}">
+            <a href="{{ asset('storage/arquivos/ios.rar') }}">
                 <img src="{{ asset('image/icons/ios.png') }}" alt="Linux Icon" class="icon">
                 TC Games
                 </a>     

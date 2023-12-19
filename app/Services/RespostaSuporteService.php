@@ -23,7 +23,7 @@ class RespostaSuporteService
     {
         $resposta = $this->repository->createNew($dto);
 
-        /* SuporteEnviado::dispatch($resposta); */
+         SuporteEnviado::dispatch($resposta); 
 
         return $resposta;
     }
