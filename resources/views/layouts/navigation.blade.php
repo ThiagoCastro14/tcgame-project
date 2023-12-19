@@ -28,7 +28,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('contato.form')" :active="request()->routeIs('contato.form')">
+                    <x-nav-link :href="route('contato.index')" :active="request()->routeIs('contato.index')">
                         {{ __('Fale Conosco') }}
                     </x-nav-link>
                 </div>

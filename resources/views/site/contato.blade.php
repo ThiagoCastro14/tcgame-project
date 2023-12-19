@@ -23,8 +23,9 @@
 
             h2 {
                 color: #6B46C1;
-                font-size: 1.5em;
-                margin-top: 20px;
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 10px;
             }
             form {
     max-width: 400px; 
@@ -43,7 +44,7 @@ textarea {
     padding: 8px; 
 }
       footer {
-                margin-top: 300px;
+                margin-top: 250px;
                 padding: 10px;
                 background-color: #333;
                 color: #fff;
@@ -52,12 +53,14 @@ textarea {
 </head>
 <body>
          
-            <form action="{{ route('contato.send') }}" method="post">
+            <form action="{{ route('contato.store') }}" method="post">
                 @csrf
                 <label for="name">Nome:</label>               
                 <input type="text" name="name" class="label" required>      
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" required>            
+                <input type="email" name="email" required>   
+                <label for="subject">Assunto:</label>               
+                <input type="text" name="subject" class="label" required>      
                 <label for="message">Mensagem:</label>
                 <textarea name="message" required></textarea>           
                 <button type="submit" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Enviar</button>

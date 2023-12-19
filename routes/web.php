@@ -7,8 +7,8 @@ use App\Http\Controllers\Site\ContatoController;
 use App\Http\Controllers\DownloadController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/contato', [ContatoController::class, 'showForm'])->name('contato.form');
-Route::post('/contato/enviar', [ContatoController::class, 'sendForm'])->name('contato.send');
+Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
+Route::post('/contato/enviar', [ContatoController::class, 'store'])->name('contato.store');
 
 
 Route::get('/', function () {

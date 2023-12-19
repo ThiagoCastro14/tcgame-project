@@ -2,29 +2,27 @@
 
 namespace App\Http\Controllers\Site;
 
+
 use App\Http\Controllers\Controller;
+use App\Mail\EmailContato;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContatoController extends Controller
 {
-    public function showForm()
+    public function index()
     {
         return view('site/contato');
     }
 
-    public function sendForm(Request $request)
+    public function store(Request $request)
     {
-        // Valide os dados do formulário
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'message' => 'required',
-        ]);
-
-        // Lógica para enviar e-mail, salvar no banco de dados, etc.
-
-        // Redirecione de volta ao formulário com uma mensagem de sucesso
-        return redirect()->route('contato.form')->with('success', 'Mensagem enviada com sucesso!');
+       Mail::to('thiagocastro.as@gmail.com', 'Thiago')->send(new EmailContato([
+        'fromName' => $request->input('name'),
+        'fromEmail' => $request->input('email'),
+        'subject' => $request->input('subject'),
+        'message' => $request->input('message'),
+       ]));
+       return redirect()->route('contato.index')->with('success', 'Mensagem enviada com sucesso!');
     }
 }
-

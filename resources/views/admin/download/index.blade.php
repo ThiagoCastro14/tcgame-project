@@ -41,7 +41,7 @@
         margin-right: 5px; /* Adicione espaçamento entre os ícones */
     }
     footer {
-                margin-top: 620px;
+                margin-top: 565px;
                 padding: 10px;
                 background-color: #333;
                 color: #fff;

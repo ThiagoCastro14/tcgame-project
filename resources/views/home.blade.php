@@ -50,7 +50,7 @@
 
             /* Estilos para o rodapé */
             footer {
-                margin-top: 300px;
+                margin-top: 260px;
                 padding: 10px;
                 background-color: #333;
                 color: #fff;

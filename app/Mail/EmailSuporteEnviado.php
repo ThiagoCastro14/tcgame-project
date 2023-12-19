@@ -54,4 +54,6 @@ class EmailSuporteEnviado extends Mailable implements ShouldQueue
     {
         return [];
     }
+    
 }
+
